@@ -11,13 +11,13 @@ log_dir = 'logs'
 os.makedirs(log_dir, exist_ok=True)
 
 # logging configuration
-logger = logging.getLogger('model_training')
+logger = logging.getLogger('model_building')
 logger.setLevel('DEBUG')
 
 console_handler = logging.StreamHandler()
 console_handler.setLevel('DEBUG')
 
-log_file_path = os.path.join(log_dir, 'model_training.log')
+log_file_path = os.path.join(log_dir, 'model_building.log')
 file_handler = logging.FileHandler(log_file_path)
 file_handler.setLevel('DEBUG')
 
@@ -82,7 +82,7 @@ def train_model(X_train : np.ndarray, y_train : np.ndarray, params: dict) -> Ran
 
         clf=RandomForestClassifier(n_estimators=params['n_estimators'],random_state=params['random_state'])
 
-        logger.debug("Model training started with samples %s",X_train.shape[0])
+        logger.debug("Model training started with samples: %s",X_train.shape[0])
         clf.fit(X_train,y_train)
         logger.debug("Model training completed")
 

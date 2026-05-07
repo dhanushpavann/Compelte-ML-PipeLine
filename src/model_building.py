@@ -45,7 +45,6 @@ def load_params(params_path: str) -> dict:
         logger.error('Unexpected error: %s', e)
         raise
 
-
 def load_data(file_path : str) -> pd.DataFrame:
     """
     param: Load data from  CSV file

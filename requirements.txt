@@ -1,0 +1,16 @@
+# Data Handling & Math
+pandas
+numpy
+
+# Machine Learning
+scikit-learn
+
+# MLOps & Versioning
+dvc[s3]
+dvclive
+
+# Configuration & Logging
+pyyaml
+
+# Utilities
+python-dotenv
